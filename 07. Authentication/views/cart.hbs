@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .product{
+            border: 1px solid black;
+            margin: 10px;
+            display: inline-block;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>Your cart</h1>
+<h3>Products count: {{items}}</h3>
+<a href="/">Resume Shopping</a>
+{{#each products}}
+    <div class="product">
+        <h3>{{name}}</h3>
+        <p>Price: {{price}}</p>
+        <a href="/remove/{{@index}}">Remove</a>
+    </div>
+{{/each}}
+<a href="/readSession">read</a>
+</body>
+</html>

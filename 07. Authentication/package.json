@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "server.js"
+  },
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.12",
+    "parser": "^0.1.4"
+  }
+}
