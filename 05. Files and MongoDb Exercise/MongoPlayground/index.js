@@ -1,8 +1,9 @@
 const http = require('http')
 const url = require('url')
 const qs = require('querystring')
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8000
 const handlers = require('./handlers/handlerBlender')
+const db = require('./config/db');
 
 require('./config/db')
 
@@ -15,5 +16,10 @@ http
         break
       }
     }
+      db();
   })
   .listen(port)
+
+
+
+
