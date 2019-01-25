@@ -1,0 +1,12 @@
+<main>
+    <h1>Browser</h1>
+    {{> searchForm}}
+    {{#each cubes}}
+        <div class="cube">
+            <img class="cube" src="{{image}}">
+            <p class="name">{{name}}</p>
+            <p><span>Difficulty level:</span> {{difficulty}}</p>
+            <button><a href="/details/{{_id}}">Details</a></button>
+        </div>
+    {{/each}}
+</main>

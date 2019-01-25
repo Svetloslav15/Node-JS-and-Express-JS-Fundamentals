@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars');
-const port = 7000;
+const port = 8000;
 
 app.use(express.static('public'));
 
@@ -10,7 +10,7 @@ app.engine('.hbs', handlebars({
 }));
 app.set('view engine', '.hbs');
 app.get('/', (req, res) => {
-    res.render('home', {user: "Svetloslav Novoselski"});
+    res.render('home', {user: "Svetloslav Novoselski!"});
 });
 
 
