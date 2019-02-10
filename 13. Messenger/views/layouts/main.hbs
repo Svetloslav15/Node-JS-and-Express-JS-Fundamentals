@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Cool Blog System</title>
+    <link href="/static/css/site.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="nav">
+    <ul class="menu">
+        {{#if user}}
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li></li>
+            <li class="right">
+                <a href="/users/logout">Logout</a>
+            </li>
+            <li class="right">Welcome, {{user.username}}!</li>
+        {{else}}
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li class="right">
+                <a href="/users/register">Register</a>
+            </li>
+            <li class="right">
+                <a href="/users/login">Login</a>
+            </li>
+        {{/if}}
+    </ul>
+</div>
+{{#if globalError}}
+    <p class="error">{{globalError}}</p>
+{{/if}}
+{{{body}}}
+
+</body>
+
+</html>
